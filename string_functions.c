@@ -4,18 +4,18 @@
  * _strlen - Returns the length of a string.
  * @s: The string whose length to check.
  *
- * Return: Integer length of string.
+ * Return: Integer length of the string.
  */
 int _strlen(char *s)
 {
-	int i = 0;
+	int length = 0;
 
 	if (!s)
 		return (0);
 
 	while (*s++)
-		i++;
-	return (i);
+		length++;
+	return (length);
 }
 
 /**
@@ -45,15 +45,13 @@ int _strcmp(char *s1, char *s2)
  * @haystack: String to search.
  * @needle: The substring to find.
  *
- * Return: Address of next character of haystack or NULL.
+ * Return: Address of the next char of haystack or NULL.
  */
 char *starts_with(const char *haystack, const char *needle)
 {
 	while (*needle)
-	{
 		if (*needle++ != *haystack++)
 			return (NULL);
-	}
 	return ((char *)haystack);
 }
 
@@ -62,7 +60,7 @@ char *starts_with(const char *haystack, const char *needle)
  * @dest: The destination buffer.
  * @src: The source buffer.
  *
- * Return: Pointer to destination buffer.
+ * Return: Pointer to the destination buffer.
  */
 char *_strcat(char *dest, char *src)
 {
